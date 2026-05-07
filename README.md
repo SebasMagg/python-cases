@@ -30,21 +30,27 @@ python-cases/
 ├── cases/                        # Core logic — pure Python functions
 │   ├── case1.py                  # Calculate total XP
 │   ├── case2.py                  # Unlock achievement system
-│   ├── case3.py                  # Case 3
-│   ├── case4.py                  # Case 4
-│   └── case5.py                  # Player health status
+│   ├── case3.py                  # Calculate damage
+│   ├── case4.py                  # Binary string to int
+│   ├── case5.py                  # Player health status
+|   └── ...
 │
 ├── tests/                        # Original test files (manual runner)
 │   ├── Case1_tests.py
+|   ├── Case2_tests.py
+|   ├── Case3_tests.py
+|   ├── Case4_tests.py
+|   ├── Case5_tests.py
 │   └── ...
 │
 ├── pytest_practice/              # Professional pytest test suite
 │   └── tests/
 │       ├── test_case1.py         # Parametrized tests — total XP
 │       ├── test_case2.py         # Parametrized tests — achievements
-│       ├── test_case3.py         # Parametrized tests — case 3
-│       ├── test_case4.py         # Parametrized tests — case 4
-│       └── test_case5.py         # Parametrized tests — player health
+│       ├── test_case3.py         # Parametrized tests — calculate damage
+│       ├── test_case4.py         # Parametrized tests — binary string to int
+|       ├── test_case5.py
+│       └── ...                   # Parametrized tests — player health
 │
 ├── conftest.py                   # Pytest root configuration
 ├── .gitignore                    # Ignored files (pycache, venv, etc)
@@ -59,8 +65,8 @@ python-cases/
 |---|------|-------------|----------|
 | 1 | `case1.py` | Calculate total XP based on level and XP gained | Functions, arithmetic |
 | 2 | `case2.py` | Unlock achievement system with XP reward | Functions, tuples, f-strings |
-| 3 | `case3.py` | Case 3 | TBD |
-| 4 | `case4.py` | Case 4 | TBD |
+| 3 | `case3.py` | Calculate total and average damage across 5 weapon types | Functions, arithmetic operators, tuples, average calculation |
+| 4 | `case4.py` | Convert binary strings to integers for servers, players and admins | Functions, tuples, type conversion, binary to integer (base 2) |
 | 5 | `case5.py` | Player health status checker | if / elif / else, conditionals |
 
 ---
@@ -110,9 +116,9 @@ pytest pytest_practice/tests/ -v --tb=short
 
 ### Expected output
 ```
-pytest_practice/tests/test_case1.py::test_total_xp[1-200-300]       PASSED
-pytest_practice/tests/test_case1.py::test_total_xp[2-50-250]        PASSED
-pytest_practice/tests/test_case1.py::test_total_xp[0-0-0]           PASSED
+pytest_practice/tests/test_case1.py::test_total_xp[1-200-300]        PASSED
+pytest_practice/tests/test_case1.py::test_total_xp[2-50-250]         PASSED
+pytest_practice/tests/test_case1.py::test_total_xp[0-0-0]            PASSED
 pytest_practice/tests/test_case2.py::test_unlock_achievement[...]    PASSED
 pytest_practice/tests/test_case5.py::test_player_health[...]         PASSED
 ```
@@ -163,8 +169,8 @@ main (protected)
 
 - [x] Case 1 — Calculate total XP
 - [x] Case 2 — Unlock achievement system
-- [x] Case 3 — Case 3
-- [x] Case 4 — Case 4
+- [x] Case 3 — Calculate damage
+- [x] Case 4 — Binary string to int
 - [x] Case 5 — Player health status
 - [x] Refactor — Split cases and tests into separate folders
 - [x] Pytest — Parametrized test suite for all cases
