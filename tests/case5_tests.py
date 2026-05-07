@@ -1,34 +1,32 @@
-#Python test cases for Total XP
-def total_xp(level, xp_to_add):
-    calculating_total_xp = (level * 100) + xp_to_add
-    return calculating_total_xp
+import sys
+sys.path.append('/Users/sebastianmagg/Downloads/Python')
 
+from cases.case5 import player_status
 
 run_cases = [
-    (1, 200, 300),
-    (2, 50, 250),
+    (0, "dead"),
+    (4, "injured"),
 ]
 
 submit_cases = run_cases + [
-    (0, 0, 0),
-    (0, 200, 200),
-    (176, 350, 17950),
-    (250, 100, 25100),
+    (6, "healthy"),
+    (5, "injured"),
+    (1, "injured"),
+    (10, "healthy"),
+    (-1, "dead"),
 ]
 
-
-def test(input1, input2, expected_output):
+def test(health, expected_status):
     print("---------------------------------")
-    print(f"Inputs: {input1}, {input2}")
-    print(f"Expected:  {expected_output}")
-    result = total_xp(input1, input2)
-    print(f"Actual: {result}")
-    if result == expected_output:
+    print(f"Health: {health}")
+    result = player_status(health)
+    print(f"Expected: {expected_status}")
+    print(f"Result:   {result}")
+    if result == expected_status:
         print("Pass")
         return True
     print("Fail")
     return False
-
 
 def main():
     passed = 0
@@ -48,7 +46,6 @@ def main():
         print(f"{passed} passed, {failed} failed, {skipped} skipped")
     else:
         print(f"{passed} passed, {failed} failed")
-
 
 test_cases = submit_cases
 if "__RUN__" in globals():

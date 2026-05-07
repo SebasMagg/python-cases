@@ -1,22 +1,26 @@
-def unlock_achievement(before_xp, ach_xp, ach_name):
-    final_xp = before_xp + ach_xp
-    alert = f"Achievement Unlocked: {ach_name}"
-    return final_xp, alert
-    
+import sys
+sys.path.append('/Users/sebastianmagg/Downloads/Python')
+
+from cases.case3 import calculate_damage
+
 run_cases = [
-    (100, 20, "Speedster", (120, "Achievement Unlocked: Speedster")),
-    (200, 50, "Killer", (250, "Achievement Unlocked: Killer")),
+    (3, 5, 2, 1, 4, (15, 3.0)),
+    (5, 5, 5, 5, 5, (25, 5.0)),
 ]
 
 submit_cases = run_cases + [
-    (100, 50, "Unstoppable", (150, "Achievement Unlocked: Unstoppable")),
-    (400, 75, "Gnarly", (475, "Achievement Unlocked: Gnarly")),
+    (1, 2, 3, 4, 5, (15, 3.0)),
+    (0, 0, 0, 0, 10, (10, 2.0)),
+    (0, 0, 0, 0, 0, (0, 0.0)),
+    (10, 20, 30, 40, 50, (150, 30.0)),
+    (2, 2, 2, 2, 2, (10, 2.0)),
+    (1, 1, 1, 1, 1, (5, 1.0)),
 ]
 
-def test(input1, input2, input3, expected_output):
+def test(sword, arrow, spear, dagger, fireball, expected_output):
     print("---------------------------------")
-    print(f"Inputs: {input1}, {input2}, {input3}")
-    result = unlock_achievement(input1, input2, input3)
+    print(f"Inputs: {sword}, {arrow}, {spear}, {dagger}, {fireball}")
+    result = calculate_damage(sword, arrow, spear, dagger, fireball)
     print(f"Expected: {expected_output}")
     print(f"Actual:   {result}")
     if result == expected_output:

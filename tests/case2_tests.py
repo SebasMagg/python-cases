@@ -1,24 +1,22 @@
-def binary_string_to_int(num_servers, num_players, num_admins):
-    string_one, string_two, string_three = int(num_servers,2), int(num_players,2), int(num_admins,2)
-    return string_one, string_two, string_three
+import sys
+sys.path.append('/Users/sebastianmagg/Downloads/Python')
+
+from cases.case2 import unlock_achievement
 
 run_cases = [
-    ("1", "10", "1010", (1, 2, 10)),
-    ("101", "11", "10100", (5, 3, 20)),
-    ("111", "1011", "11010", (7, 11, 26)),
+    (100, 20, "Speedster", (120, "Achievement Unlocked: Speedster")),
+    (200, 50, "Killer", (250, "Achievement Unlocked: Killer")),
 ]
 
 submit_cases = run_cases + [
-    ("0", "0", "0", (0, 0, 0)),
-    ("1111", "1111", "1111", (15, 15, 15)),
-    ("101010", "110011", "101010", (42, 51, 42)),
+    (100, 50, "Unstoppable", (150, "Achievement Unlocked: Unstoppable")),
+    (400, 75, "Gnarly", (475, "Achievement Unlocked: Gnarly")),
 ]
-
 
 def test(input1, input2, input3, expected_output):
     print("---------------------------------")
     print(f"Inputs: {input1}, {input2}, {input3}")
-    result = binary_string_to_int(input1, input2, input3)
+    result = unlock_achievement(input1, input2, input3)
     print(f"Expected: {expected_output}")
     print(f"Actual:   {result}")
     if result == expected_output:
@@ -26,7 +24,6 @@ def test(input1, input2, input3, expected_output):
         return True
     print("Fail")
     return False
-
 
 def main():
     passed = 0
@@ -47,10 +44,8 @@ def main():
     else:
         print(f"{passed} passed, {failed} failed")
 
-
 test_cases = submit_cases
 if "__RUN__" in globals():
     test_cases = run_cases
 
 main()
-
