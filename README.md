@@ -183,7 +183,7 @@ main (protected)
 
 **Sebastian Ernesto Magaña Ramirez**
 - Product Owner | Project Manager | Scrum Master | QA Tester
-- Python        | Vercel          | Docker       | n8n        | Supabase
+- Python | Vercel | Docker | n8n | Supabase
 - GitHub: [@SebasMagg](https://github.com/SebasMagg)
 - LinkedIn: [linkedin.com/in/sebastianmagg](https://linkedin.com/in/sebastianmagg)
 - sebastianramirez.99@gmail.com
