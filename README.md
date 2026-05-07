@@ -1,4 +1,4 @@
-# 🐍 Python Cases — Boot.dev Learning Journey
+# Python Cases — Boot.dev Learning Journey
 
 ![Python](https://img.shields.io/badge/Python-3.14-blue?style=for-the-badge&logo=python&logoColor=white)
 ![Pytest](https://img.shields.io/badge/Pytest-9.0.3-green?style=for-the-badge&logo=pytest&logoColor=white)
@@ -10,19 +10,19 @@
 
 ---
 
-## 👨‍💻 About This Repository
+## About This Repository
 
 This repository documents my Python learning journey through the **Boot.dev** course. Each case is a real coding exercise solved from scratch, refactored following professional Python standards, and tested using **pytest** with parametrized test cases.
 
 The goal is not just to solve exercises — but to practice:
-- ✅ Clean code structure and naming conventions
-- ✅ Professional Git workflow (branches, pull requests, signed commits)
-- ✅ Test-driven thinking with pytest
-- ✅ Real-world project organization
+- Clean code structure and naming conventions
+- Professional Git workflow (branches, pull requests, signed commits)
+- Test-driven thinking with pytest
+- Real-world project organization
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 python-cases/
@@ -53,7 +53,7 @@ python-cases/
 
 ---
 
-## 🧪 Cases Overview
+## Cases Overview
 
 | # | File | Description | Concepts |
 |---|------|-------------|----------|
@@ -65,7 +65,7 @@ python-cases/
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 - Python 3.10+
@@ -91,7 +91,7 @@ pip install pytest
 
 ---
 
-## 🧪 Running Tests
+## Running Tests
 
 ### Run all tests at once
 ```bash
@@ -119,7 +119,7 @@ pytest_practice/tests/test_case5.py::test_player_health[...]         PASSED
 
 ---
 
-## 🏗️ Testing Architecture
+## Testing Architecture
 
 Tests are written using **pytest** with `@pytest.mark.parametrize` — the professional standard for Python testing used in major frameworks like Django, Flask and FastAPI.
 
@@ -141,7 +141,7 @@ def test_total_xp(level, xp, expected):
 
 ---
 
-## 🌿 Git Workflow
+## Git Workflow
 
 This project follows a professional Git branching strategy:
 
@@ -159,7 +159,7 @@ main (protected)
 
 ---
 
-## 📈 Progress
+## Progress
 
 - [x] Case 1 — Calculate total XP
 - [x] Case 2 — Unlock achievement system
@@ -173,17 +173,18 @@ main (protected)
 
 ---
 
-## 👤 Author
+## Author
 
 **Sebastian Ernesto Magaña Ramirez**
-- 💼 Project Manager | QA Tester | Scrum Master | Product Owner
-- 🐙 GitHub: [@SebasMagg](https://github.com/SebasMagg)
-- 💼 LinkedIn: [linkedin.com/in/sebastianmagg](https://linkedin.com/in/sebastianmagg)
-- 📧 sebastianramirez.99@gmail.com
+- Product Owner | Project Manager | Scrum Master | QA Tester
+- Python        | Vercel          | Docker       | n8n        | Supabase
+- GitHub: [@SebasMagg](https://github.com/SebasMagg)
+- LinkedIn: [linkedin.com/in/sebastianmagg](https://linkedin.com/in/sebastianmagg)
+- sebastianramirez.99@gmail.com
 
 ---
 
-## 📚 Learning Resources
+## Learning Resources
 
 - [Boot.dev](https://www.boot.dev) — The course driving this repository
 - [pytest docs](https://docs.pytest.org) — Official pytest documentation
@@ -191,12 +192,12 @@ main (protected)
 
 ---
 
-## 📄 License
+## License
 
 This project is licensed under the MIT License — feel free to use it as a reference for your own learning journey.
 
 ---
 
 <p align="center">
-  <i>Built with 💙 while learning Python the right way.</i>
+  <i>Built with 👾 while learning Python the right way.</i>
 </p>
