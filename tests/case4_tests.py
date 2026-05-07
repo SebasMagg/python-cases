@@ -1,27 +1,24 @@
-def calculate_damage(sword, arrow, spear, dagger, fireball):
-    total_damage = sword + arrow + spear + dagger + fireball
-    average_damage = total_damage / 5 #Average = Total / Number of items.
-    return total_damage, average_damage
-    
+import sys
+sys.path.append('/Users/sebastianmagg/Downloads/Python')
+
+from cases.case4 import binary_string_to_int
+
 run_cases = [
-    (3, 5, 2, 1, 4, (15, 3.0)),
-    (5, 5, 5, 5, 5, (25, 5.0)),
+    ("1", "10", "1010", (1, 2, 10)),
+    ("101", "11", "10100", (5, 3, 20)),
+    ("111", "1011", "11010", (7, 11, 26)),
 ]
 
 submit_cases = run_cases + [
-    (1, 2, 3, 4, 5, (15, 3.0)),
-    (0, 0, 0, 0, 10, (10, 2.0)),
-    (0, 0, 0, 0, 0, (0, 0.0)),
-    (10, 20, 30, 40, 50, (150, 30.0)),
-    (2, 2, 2, 2, 2, (10, 2.0)),
-    (1, 1, 1, 1, 1, (5, 1.0)),
+    ("0", "0", "0", (0, 0, 0)),
+    ("1111", "1111", "1111", (15, 15, 15)),
+    ("101010", "110011", "101010", (42, 51, 42)),
 ]
 
-
-def test(sword, arrow, spear, dagger, fireball, expected_output):
+def test(input1, input2, input3, expected_output):
     print("---------------------------------")
-    print(f"Inputs: {sword}, {arrow}, {spear}, {dagger}, {fireball}")
-    result = calculate_damage(sword, arrow, spear, dagger, fireball)
+    print(f"Inputs: {input1}, {input2}, {input3}")
+    result = binary_string_to_int(input1, input2, input3)
     print(f"Expected: {expected_output}")
     print(f"Actual:   {result}")
     if result == expected_output:
@@ -29,7 +26,6 @@ def test(sword, arrow, spear, dagger, fireball, expected_output):
         return True
     print("Fail")
     return False
-
 
 def main():
     passed = 0
@@ -49,7 +45,6 @@ def main():
         print(f"{passed} passed, {failed} failed, {skipped} skipped")
     else:
         print(f"{passed} passed, {failed} failed")
-
 
 test_cases = submit_cases
 if "__RUN__" in globals():
